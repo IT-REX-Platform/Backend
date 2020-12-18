@@ -5,6 +5,7 @@ pipeline {
         stage('Pre-build') {
             steps {
                 echo 'Pre-build..'
+                sh 'cd gateway && ./gradlew npmInstall'
             }
         }
         stage('Build Gateway') {
