@@ -1,0 +1,10 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["gateway", "orderbook"],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "monitoring": "prometheus",
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "NzA2MTcwZWFkN2E5MzYxZGZmMGVlMGJmM2RiZmRkNzlhZTg0ZGY4YmRlMjQ0NTUyZjNkOTQ3M2IyMzQ2NGUwNzJjMDNjM2MzMTI1MWVhOGUwZDY2ODQwZWNjZjhkZjUwYTQ2Zg=="
+  }
+}

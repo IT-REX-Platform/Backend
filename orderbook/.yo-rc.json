@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.vbk.orderbook"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "microservice",
+    "baseName": "orderbook",
+    "packageName": "com.vbk.orderbook",
+    "packageFolder": "com/vbk/orderbook",
+    "serverPort": "8081",
+    "authenticationType": "oauth2",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NmI3N2EyYjk1YTczN2U3YzkzNjA0OGUxMzg0YzZmZGUzNWE3ZWMzNTNjNWNmM2Y0YjdmZWU0ZTQ4ZTYxYmNhMjI2MGQ2NTliODE4NjQ0M2IzM2Q4YjE1YTI0NTc0ODlkZTU4ZjAyYzAyNDVlNjFjM2U1MTc1YzNmNGNkNzk2YjU=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1607707748340,
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true,
+    "lastLiquibaseTimestamp": 1607707975000
+  }
+}
