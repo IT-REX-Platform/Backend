@@ -72,7 +72,7 @@ public class OrderbookApp {
         String serverPort = env.getProperty("server.port");
         String contextPath = env.getProperty("server.servlet.context-path");
         if (StringUtils.isBlank(contextPath)) {
-            contextPath = "/";
+            contextPath = "/"
         }
         String hostAddress = "localhost";
         try {
