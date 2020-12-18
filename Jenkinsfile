@@ -5,6 +5,8 @@ pipeline {
         stage('Pre-build') {
             steps {
                 echo 'Pre-build..'
+                sh 'cd gateway && npm install'
+                sd 'cd orderbook && npm install'
             }
         }
         stage('Build Gateway') {
