@@ -34,7 +34,7 @@ pipeline {
                 sh 'rm -r /srv/Backend/*'
                 sh 'cd gateway/build && mv jib-image.tar /srv/Backend/gateway.tar'
                 sh 'cd orderbook/build && mv jib-image.tar /srv/Backend/orderbook.tar'
-                sh 'touch /srv/Backend/deploy"
+                sh 'touch /srv/Backend/deploy'
             }
         }
     }
