@@ -22,6 +22,14 @@ services:
       - POSTGRES_USER=gateway
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
+  keycloak-postgres:
+    image: 'postgres:12.3'
+    environment:
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: "k3ycl04k"
+      POSTGRES_DB: keycloak
+    volumes:
+      - "/srv/Backend/keycloak-db:/var/lib/postgresql/data"
 
   orderbook:
     image: orderbook
@@ -57,6 +65,8 @@ services:
     extends:
       file: keycloak.yml
       service: keycloak
+    depends_on:
+      - keycloak-postgres
 
   prometheus:
     extends:

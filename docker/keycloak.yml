@@ -18,10 +18,13 @@ services:
     volumes:
       - ./realm-config:/opt/jboss/keycloak/realm-config
     environment:
-      - KEYCLOAK_USER=admin
-      - KEYCLOAK_PASSWORD=admin
-      - DB_VENDOR=h2
-      - PROXY_ADDRESS_FORWARDING=true
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      DB_VENDOR: postgres
+      DB_ADDR: keycloak-postgres
+      DB_USER: keycloak
+      DB_PASSWORD: "k3ycl04k"
+#      - PROXY_ADDRESS_FORWARDING=true
     ports:
       - 9080:9080
       - 9443:9443

@@ -21,7 +21,7 @@
   "actionTokenGeneratedByAdminLifespan": 43200,
   "actionTokenGeneratedByUserLifespan": 300,
   "enabled": true,
-  "sslRequired": "external",
+  "sslRequired": "none",
   "registrationAllowed": false,
   "registrationEmailAsUsername": false,
   "rememberMe": false,
@@ -732,7 +732,7 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "jhipster-registry",
-      "redirectUris": ["http://127.0.0.1:8761/*", "http://localhost:8761/*"],
+      "redirectUris": ["http://127.0.0.1:8761/*", "http://localhost:8761/*", "*"],
       "webOrigins": ["http://127.0.0.1:8761", "http://localhost:8761"],
       "notBefore": 0,
       "bearerOnly": false,
@@ -858,7 +858,8 @@
         "http://localhost:8100/*",
         "http://127.0.0.1:8761/*",
         "http://localhost:9000/*",
-        "dev.localhost.ionic:*"
+        "dev.localhost.ionic:*",
+        "*"
       ],
       "webOrigins": [
         "http://localhost:8080",
