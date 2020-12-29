@@ -44,6 +44,11 @@ services:
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
 
+#  nginx:
+#    extends:
+#      file: nginx.yml
+#      service: nginx
+
   jhipster-registry:
     extends:
       file: jhipster-registry.yml

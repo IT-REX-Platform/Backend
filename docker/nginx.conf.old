@@ -1,0 +1,16 @@
+    upstream keycloak {
+        server keycloak:9080;
+    }
+
+    server {
+        listen 9080;
+        add_header Strict-Transport-Security "max-age=86400; includeSubdomains; preload" always;
+
+        location /auth {
+            proxy_set_header HOST $host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://keycloak;
+        }    
+    }
