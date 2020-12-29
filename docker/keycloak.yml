@@ -12,6 +12,8 @@ services:
         '-Dkeycloak.migration.strategy=OVERWRITE_EXISTING',
         '-Djboss.socket.binding.port-offset=1000',
         '-Dkeycloak.profile.feature.upload_scripts=enabled',
+#        '-Dkeycloak.frontendUrl=http://129.69.217.173:9080/auth',
+#        '-Dkeycloak.forceBackendUrlToFrontendUrl=true',
       ]
     volumes:
       - ./realm-config:/opt/jboss/keycloak/realm-config
@@ -19,6 +21,7 @@ services:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
       - DB_VENDOR=h2
+      - PROXY_ADDRESS_FORWARDING=true
     ports:
       - 9080:9080
       - 9443:9443
